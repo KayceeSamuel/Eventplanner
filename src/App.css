@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-image: linear-gradient(120deg, #5b85b6, #4ef5d9);
+  color: black;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
+}
+
+header,
+form {
+  min-height: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+form input, form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form button{
+  color: #5b85b6;
+  background: white;
+  cursor: pointer;
+  transition:all 0.3 ease;
+}
+
+form button:hover{
+  background: #5b85b6;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo {
+  margin: 0.5rem;
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
 }
+
+.select{
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #5b85b6;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #5b85b6;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5
+  }
+
+  .todo-item{
+    padding: 0rem 0.5rem;
+  }
